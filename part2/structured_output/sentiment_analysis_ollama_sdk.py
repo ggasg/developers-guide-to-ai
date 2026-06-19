@@ -56,7 +56,7 @@ response = analyze_sentiment(
   "Don't trust @AcmeCorp.  It's been weeks and my order was never even shipped!")
 
 social_message = SocialMessage.model_validate_json(
-  response.message.content)
+  response.message.content or "")
 
 print(f"Sentiment: {social_message.sentiment}")
 print(f"Department: {social_message.department}")
