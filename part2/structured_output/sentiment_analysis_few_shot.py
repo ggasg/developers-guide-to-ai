@@ -70,6 +70,7 @@ client = instructor.from_provider(
     "ollama/llama3",
     base_url="http://localhost:11434/v1",
     mode=instructor.Mode.JSON,
+    async_client=False
 )
 
 
